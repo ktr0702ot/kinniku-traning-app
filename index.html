@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>筋トレメニュー</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>💪 <span class="title-text">筋トレメニュー</span> <span class="flip">💪</span></h1>
+      <p id="quote" class="quote"></p>
+    </header>
+
+    <nav id="day-list" class="day-list">
+      <!-- 曜日ボタンはJSで生成 -->
+    </nav>
+
+    <main id="main-content" class="main-content">
+      <div class="placeholder">
+        <p>👆 曜日を選択してください</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
