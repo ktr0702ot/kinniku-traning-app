@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kintre-v1';
+const CACHE_NAME = 'kintre-v2';
 const ASSETS = [
   './',
   './index.html',
