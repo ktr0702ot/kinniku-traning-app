@@ -183,34 +183,32 @@
       optionsHtml += `<option value="${bp}" ${selected}>${bp}</option>`;
     });
 
-    let menusHtml = `
-      <div class="menu-labels">
-        <span>メニュー</span>
-        <span>kg</span>
-        <span>回数</span>
-        <span>セット</span>
-        <span>更新OK</span>
-        <span></span>
-      </div>
-    `;
+    let menusHtml = '';
 
     part.menus.forEach((menu, mi) => {
       menusHtml += `
         <div class="menu-item">
-          <input type="text" value="${escapeHtml(menu.name)}" placeholder="メニュー名"
-            data-part="${partIndex}" data-menu="${mi}" data-field="name">
-          <input type="number" value="${menu.weight || ''}" placeholder="kg"
-            data-part="${partIndex}" data-menu="${mi}" data-field="weight" min="0" step="0.5">
-          <input type="number" value="${menu.reps}" placeholder="回"
-            data-part="${partIndex}" data-menu="${mi}" data-field="reps" min="0">
-          <input type="number" value="${menu.sets}" placeholder="set"
-            data-part="${partIndex}" data-menu="${mi}" data-field="sets" min="0">
-          <label class="update-ok-check">
-            <input type="checkbox" ${menu.updateOk ? 'checked' : ''}
-              data-part="${partIndex}" data-menu="${mi}" data-field="updateOk">
-            <span class="checkmark"></span>
-          </label>
-          <button class="delete-menu-btn" data-action="delete-menu" data-part="${partIndex}" data-menu="${mi}">✕</button>
+          <div class="menu-row-top">
+            <input type="text" value="${escapeHtml(menu.name)}" placeholder="メニュー名"
+              data-part="${partIndex}" data-menu="${mi}" data-field="name">
+          </div>
+          <div class="menu-row-bottom">
+            <label class="menu-field-label">kg</label>
+            <input type="number" value="${menu.weight || ''}" placeholder="kg"
+              data-part="${partIndex}" data-menu="${mi}" data-field="weight" min="0" step="0.5">
+            <label class="menu-field-label">回</label>
+            <input type="number" value="${menu.reps}" placeholder="回"
+              data-part="${partIndex}" data-menu="${mi}" data-field="reps" min="0">
+            <label class="menu-field-label">set</label>
+            <input type="number" value="${menu.sets}" placeholder="set"
+              data-part="${partIndex}" data-menu="${mi}" data-field="sets" min="0">
+            <label class="update-ok-check">
+              <input type="checkbox" ${menu.updateOk ? 'checked' : ''}
+                data-part="${partIndex}" data-menu="${mi}" data-field="updateOk">
+              <span class="checkmark"></span>
+            </label>
+            <button class="delete-menu-btn" data-action="delete-menu" data-part="${partIndex}" data-menu="${mi}">✕</button>
+          </div>
         </div>
       `;
     });

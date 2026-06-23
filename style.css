@@ -276,11 +276,7 @@ header h1 {
 }
 
 .menu-item {
-  display: grid;
-  grid-template-columns: 1fr 46px 46px 46px 40px 32px;
-  gap: 6px;
-  align-items: center;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(42, 42, 74, 0.5);
 }
 
@@ -288,14 +284,48 @@ header h1 {
   border-bottom: none;
 }
 
-.menu-item input {
+.menu-row-top {
+  margin-bottom: 6px;
+}
+
+.menu-row-top input {
   width: 100%;
   padding: 8px 10px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--bg-input);
   color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.menu-row-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.menu-field-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.menu-row-bottom input[type="number"] {
+  width: 48px;
+  padding: 6px 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-input);
+  color: var(--text-primary);
   font-size: 0.85rem;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.menu-row-bottom input[type="number"]::-webkit-inner-spin-button,
+.menu-row-bottom input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 .menu-item input::placeholder {
@@ -307,16 +337,6 @@ header h1 {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 2px rgba(233, 69, 96, 0.2);
-}
-
-.menu-item input[type="number"] {
-  text-align: center;
-  -moz-appearance: textfield;
-}
-
-.menu-item input[type="number"]::-webkit-inner-spin-button,
-.menu-item input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
 }
 
 .update-ok-check {
@@ -375,17 +395,6 @@ header h1 {
   color: #fff;
 }
 
-.menu-labels {
-  display: grid;
-  grid-template-columns: 1fr 46px 46px 46px 40px 32px;
-  gap: 6px;
-  padding: 6px 0 2px;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-}
 
 /* ========== 追加ボタン ========== */
 .add-menu-btn {
@@ -442,7 +451,7 @@ header h1 {
 
 .memo-textarea {
   width: 100%;
-  min-height: 200px;
+  min-height: 60vh;
   padding: 12px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
