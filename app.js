@@ -193,15 +193,15 @@
               data-part="${partIndex}" data-menu="${mi}" data-field="name">
           </div>
           <div class="menu-row-bottom">
-            <label class="menu-field-label">kg</label>
             <input type="number" value="${menu.weight || ''}" placeholder="kg"
               data-part="${partIndex}" data-menu="${mi}" data-field="weight" min="0" step="0.5">
-            <label class="menu-field-label">回</label>
+            <label class="menu-field-label">kg</label>
             <input type="number" value="${menu.reps}" placeholder="回"
               data-part="${partIndex}" data-menu="${mi}" data-field="reps" min="0">
-            <label class="menu-field-label">set</label>
+            <label class="menu-field-label">回</label>
             <input type="number" value="${menu.sets}" placeholder="set"
               data-part="${partIndex}" data-menu="${mi}" data-field="sets" min="0">
+            <label class="menu-field-label">set</label>
             <label class="update-ok-check">
               <input type="checkbox" ${menu.updateOk ? 'checked' : ''}
                 data-part="${partIndex}" data-menu="${mi}" data-field="updateOk">
