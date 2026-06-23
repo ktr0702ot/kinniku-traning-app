@@ -1,0 +1,1 @@
+# kinniku-traning-app
